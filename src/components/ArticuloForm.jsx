@@ -18,18 +18,15 @@ export default function ArticuloForm({ onAgregar }) {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="card p-3 mb-4 shadow-sm border-0"
-    >
-      <h5 className="mb-3 text-center text-info">Añadir nuevo artículo</h5>
+    <form onSubmit={handleSubmit} className="card p-3 mb-4 shadow-sm border-0">
+      <h5 className="mb-3 text-center neon-title">Add new item</h5>
 
       <div className="mb-3">
-        <label className="form-label">Nombre</label>
+        <label className="form-label">Name</label>
         <input
           type="text"
           className="form-control"
-          placeholder="Ej. Lápiz"
+          placeholder="e.g. Pencil"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
           required
@@ -37,12 +34,12 @@ export default function ArticuloForm({ onAgregar }) {
       </div>
 
       <div className="mb-3">
-        <label className="form-label">Coste (€)</label>
+        <label className="form-label">Cost (€)</label>
         <input
           type="number"
           step="0.01"
           className="form-control"
-          placeholder="Ej. 0.50"
+          placeholder="e.g. 0.50"
           value={coste}
           onChange={(e) => setCoste(e.target.value)}
           required
@@ -50,20 +47,20 @@ export default function ArticuloForm({ onAgregar }) {
       </div>
 
       <div className="mb-3">
-        <label className="form-label">Precio de venta (€)</label>
+        <label className="form-label">Sale price (€)</label>
         <input
           type="number"
           step="0.01"
           className="form-control"
-          placeholder="Ej. 1.20"
+          placeholder="e.g. 1.20"
           value={venta}
           onChange={(e) => setVenta(e.target.value)}
           required
         />
       </div>
 
-      <button className="btn btn-success w-100 py-2 fw-bold">
-        Guardar artículo
+      <button className="btn btn-primary w-100 py-2 fw-bold">
+        Save item
       </button>
     </form>
   );

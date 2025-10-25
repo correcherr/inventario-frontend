@@ -31,29 +31,38 @@ export default function App() {
 
   return (
     <div className="container py-3">
-      <h2 className="text-center mb-3 text-info">📦 Inventario</h2>
+      <h2 className="text-center mb-4 neon-title">Warehouse</h2>
 
       <div className="d-grid mb-3">
         <button
           className="btn btn-primary py-2 fw-bold"
           onClick={() => setMostrarFormulario((v) => !v)}
         >
-          {mostrarFormulario ? "Cerrar formulario" : "➕ Añadir producto"}
+          {mostrarFormulario ? "Close form" : "➕ Add product"}
         </button>
       </div>
 
-      {mostrarFormulario && (
-        <ArticuloForm onAgregar={agregarArticulo} />
-      )}
+      {mostrarFormulario && <ArticuloForm onAgregar={agregarArticulo} />}
 
       <ListaArticulos articulos={articulos} onSeleccionChange={setTotales} />
-    <div className="card text-center mt-4 shadow-sm border-0 bg-dark">
-      <div className="card-body">
-        <h1 className="fw-bold mb-1 neon-title"> Totales seleccionados </h1>          
-        <h2 className="fw-bold mb-1 neon-venta"> Venta €{totales.venta.toFixed(2)} </h2>
-        <h2 className="fw-bold mb-1 neon-coste"> Coste €{totales.coste.toFixed(2)} </h2>
+
+      <div className="card text-center mt-4 shadow-sm border-0 total-card">
+        <div className="card-body">
+          <h1 className="fw-bold mb-1 neon-title"> Selected total </h1>
+          <hr />
+
+          <h2 className="fw-bold mb-1.5 neon-venta">
+            Sale {totales.venta.toFixed(2)}€
+          </h2>
+          <h2 className="fw-bold mb-1 neon-coste">
+            Cost {totales.coste.toFixed(2)}€
+          </h2>
+          <hr />
+          <h2 className="fw-bold mb-1 neon-coste">
+            Proffit {(totales.venta.toFixed(2) - totales.coste.toFixed(2)).toFixed(2)}€
+          </h2>
+        </div>
       </div>
-    </div>
     </div>
   );
 }
