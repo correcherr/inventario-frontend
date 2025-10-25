@@ -1,0 +1,72 @@
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+}
+
+input,
+.form-control,
+.btn {
+  border-radius: 10px !important;
+}
+
+input,
+.form-control {
+  background-color: #2a2a2a !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #444 !important;
+}
+
+input:focus,
+.form-control:focus {
+  background-color: #2e2e2e !important;
+  box-shadow: 0 0 0 2px #0d6efd !important;
+}
+
+.btn-primary {
+  background-color: #0d6efd !important;
+  border: none !important;
+}
+
+.btn-success {
+  background-color: #198754 !important;
+  border: none !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  border: none !important;
+}
+
+.bg-dark-subtle {
+  background-color: #2a2a2a !important;
+}
+
+.bg-success-subtle {
+  background-color: #193c2a !important;
+}
+
+.text-muted {
+  color: #aaa !important;
+}
+
+.neon-title {
+    font-weight: bold;
+    color: hsl(226, 100%, 50%);
+    text-shadow: 0 0 10px #0011ff, 0 0 20px hsl(226, 100%, 50%), 0 0 30px hsl(226, 100%, 50%);
+}
+
+.neon-venta {
+    color: #cccccc;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.neon-coste {
+    color: #cccccc;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
