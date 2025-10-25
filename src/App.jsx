@@ -31,7 +31,7 @@ export default function App() {
 
   return (
     <div className="container py-3">
-      <h2 className="text-center mb-4 neon-title">Warehouse</h2>
+      <h2 className="text-center mb-4 neon-title">WAREHOUSE</h2>
 
       <div className="d-grid mb-3">
         <button
